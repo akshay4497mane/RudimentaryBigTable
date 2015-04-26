@@ -1,0 +1,25 @@
+for all 
+sudo nano /etc/hosts
+172.50.88.10    hndata4
+172.50.88.4     HNData3
+172.50.88.49    HNData1
+172.50.88.48    HNName
+172.50.88.46    HNData2
+
+for all 
+sudo nano /etc/hostname
+
+for all  (build keys)
+ssh-keygen
+
+ssh-copy-id hndata3 (send keys to all hosts)
+
+After this , we should be able to SSH from/into any of the machines 
+
+mpicc hello.c 
+scp a.out ghosh@hndata3:
+mpirun -np 4 -H hndata3,hndata4 a.out
+
+
+
+
